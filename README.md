@@ -1,6 +1,6 @@
 # Server-web-Teseracto
 
-<h1> Para este proyecto se es necesario consultar que las tecnoligias que uticemos sean compatibles para lo que querermos hacer</h1>
+<h1> Para este proyecto se es necesario consultar que las tecnologias que uticemos sean compatibles para lo que queremos hacer</h1>
 
 REVISAR LO SIGUIENTE:
 
@@ -8,9 +8,9 @@ dependencias y compatibilidad con PostgresSQL: Revisar documentación https://no
 
 Usaremos de typescript como lenguaje principal, postgresql como base de datos y express como framework para crear el servidor
 
-PASO 1. Clona el repositorio del proyecto con: git clone https://github.com/edRan21/Server-web-Teseracto.git
+<h1>PASO 1</h1> Clona el repositorio del proyecto con: git clone https://github.com/edRan21/Server-web-Teseracto.git
 
-PASO 2: Instala las dependencias que necesitará el proyecto, estas estan basadas en los videos: https://youtu.be/Gqr15Uvhr6s?si=7ETVZ1CnEPppSSSF y https://youtu.be/8qteIhQe4ts?si=-L_I0pJiULw6vzlV
+<h1> PASO 2 </h1> Instala las dependencias que necesitará el proyecto, estas estan basadas en los videos: https://youtu.be/Gqr15Uvhr6s?si=7ETVZ1CnEPppSSSF y https://youtu.be/8qteIhQe4ts?si=-L_I0pJiULw6vzlV
 
 Paquetes y dependencias a instalar con el comando: 
 
@@ -47,12 +47,12 @@ npm install --save-dev @types/pg
 
 "Estas dependencias no serán utilizadas en producción, no entran en el package.json"
 
-PASO 3: asegurarse de que typescript se encuentre debidamente instalado con el comando: tsc -v 
-<p1> En caso de que no funcione o aparezca "command not found" utlizar el comando: npm install -g typescript</p1>
+<h1> PASO 3 </h1> asegurarse de que typescript se encuentre debidamente instalado con el comando: tsc -v 
+<p1> En caso de que no funcione o aparezca "command not found" utlizar el comando: npm install -g typescript </p1>
 Este comando instalará Typescript de manera global en la computadora. Posteriormene intentar nuevamente ejecutar el comando "tsc -v".
 
 Una vez que se asegure de que se instalo correctamente ejecutará el siguente comando: tsc --init
 
-<p1>Este comando generará un archivo de configuración para activar configuraciones de typescript</p1>
+<p1> Este comando generará un archivo de configuración para activar configuraciones de typescript </p1>
 
-<p1>IMPORTANTE PARA EL DESARROLLO: .gitignore literalmente ignora todo los archivos que especifiquemos aquí, como por ejemplo dependencias reinstalables, etc (NO SUBIR VARIBLES DE ENTORNO, EN ESPECIFICO EL ARCHIVO '.env')</p1>
+<p1> IMPORTANTE PARA EL DESARROLLO: el archivo ".gitignore" literalmente ignora todo los archivos que especifiquemos aquí, como por ejemplo dependencias reinstalables, etc (NO SUBIR VARIBLES DE ENTORNO, EN ESPECIFICO EL ARCHIVO '.env') </p1>
