@@ -9,17 +9,17 @@ REVISAR LO SIGUIENTE:
 Usaremos de typescript como lenguaje principal, postgresql como base de datos y express como framework para crear el servidor
 
 <h1>PASO 1</h1> Clona el repositorio del proyecto con: 
-'''
+```
 git clone https://github.com/edRan21/Server-web-Teseracto.git
-'''
+```
 
 <h1> PASO 2 </h1> Instala las dependencias que necesitará el proyecto, estas estan basadas en los videos: https://youtu.be/Gqr15Uvhr6s?si=7ETVZ1CnEPppSSSF y https://youtu.be/8qteIhQe4ts?si=-L_I0pJiULw6vzlV
 
 Paquetes y dependencias a instalar con el comando: 
 
-'''
+```
 npm install class-validator cors dotenv express morgan typeorm typeorm-naming-strategies typescript.
-'''
+```
 
 Breve descripción y función de cada depedencia:
 1. class-validator: Permite generar validadores de clases sobre sus elementos a traves de sus decoradores, ejemplo: si es un email, etc
@@ -41,45 +41,48 @@ Breve descripción y función de cada depedencia:
 9. typescript: Es la dependencia que nos brindará las funcionalidades de la sintaxis del lenguaje de programación Typescript unicamente funcional dentro del entorno de desarrollo, sin tener la que installar localmente.
 
 Para instalar el uso de postgresql con nodejs:
-'''
+```
  npm install pg
-'''
+```
 
 **Dependencias de desarollo necesarias:**
 
-'''
+```
 npm install -D @types/cors @types/express @types/morgan concurrently nodemon
-'''
+```
 
-'''
+```
 npm install --save pg   # Para PostgreSQL
-'''
+```
 
-'''
+```
 npm install --save-dev @types/pg 
-'''
+```
 
 **"Estas dependencias no serán utilizadas en producción, no entran en el package.json"**
 
-<h1> PASO 3 </h1> asegurarse de que typescript se encuentre debidamente instalado con el comando: tsc -v 
+<h1> PASO 3 </h1> asegurarse de que typescript se encuentre debidamente instalado con el comando: 
+```
+tsc -v
+``` 
 <p1> En caso de que no funcione o aparezca "command not found" utlizar el comando:
 
-'''
+```
 npm install -g typescript 
-'''
+```
 
 </p1>
 Este comando instalará Typescript de manera global en la computadora. Posteriormene intentar nuevamente ejecutar el comando: 
 
-'''
+```
 tsc -v
-'''
+```
 
 Una vez que se asegure de que se instalo correctamente ejecutará el siguente comando: 
 
-'''
+```
 tsc --init
-'''
+```
 
 <p1> Este comando generará un archivo de configuración para activar configuraciones de typescript </p1>
 
