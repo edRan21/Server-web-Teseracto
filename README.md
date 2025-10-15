@@ -1,6 +1,6 @@
 # Server-web-Teseracto
 
-<h1> Para este proyecto se es necesario consultar que las tecnologias que uticemos sean compatibles para lo que queremos hacer</h1>
+<h1> Para este proyecto se es necesario consultar que las tecnologias que utilicemos sean compatibles para lo que queremos hacer</h1>
 
 REVISAR LO SIGUIENTE:
 
