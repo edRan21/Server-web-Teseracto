@@ -9,6 +9,7 @@ REVISAR LO SIGUIENTE:
 Usaremos de typescript como lenguaje principal, postgresql como base de datos y express como framework para crear el servidor
 
 <h1>PASO 1</h1> Clona el repositorio del proyecto con el siguiente comando: 
+
 ```
 git clone https://github.com/edRan21/Server-web-Teseracto.git
 ```
