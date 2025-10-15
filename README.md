@@ -16,6 +16,7 @@ git clone https://github.com/edRan21/Server-web-Teseracto.git
 
 <h1> PASO 2 </h1> Instala las dependencias que necesitará el proyecto, estas estan basadas en los videos: https://youtu.be/Gqr15Uvhr6s?si=7ETVZ1CnEPppSSSF y https://youtu.be/8qteIhQe4ts?si=-L_I0pJiULw6vzlV
 
+
 Paquetes y dependencias a instalar con el comando: 
 
 ```
