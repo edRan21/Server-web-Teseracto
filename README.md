@@ -4,7 +4,7 @@
 
 REVISAR LO SIGUIENTE:
 
-1. dependencias y compatibilidad con PostgresSQL: CONSULTAR documentación https://node-postgres.com/
+1. dependencias y compatibilidad con PostgresSQL: CONSULTAR documentación https://node-postgres.com/ **Y REVISAR LA DOCUMENTACIÓN OFICIAL DE Typescript: ** https://www.typescriptlang.org/docs/
 
 Usaremos de typescript como lenguaje principal, postgresql como base de datos y express como framework para crear el servidor
 
