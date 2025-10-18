@@ -8,11 +8,28 @@ REVISAR LO SIGUIENTE:
 
 Usaremos de typescript como lenguaje principal, postgresql como base de datos y express como framework para crear el servidor
 
-<h1>PASO 1</h1> Clona el repositorio del proyecto con el siguiente comando: 
+<h1>PASO 1</h1> Clona el repositorio del proyecto con el siguiente comando en cualquier ubicación de tu equipo: 
 
 ```
 git clone https://github.com/edRan21/Server-web-Teseracto.git
 ```
+
+**Una vez que se clona todo el proyecto para revisar que cambios se le realizan al repositorio o en el desarrollo local ingresa este comando:**
+
+```
+git status 
+```
+
+**De igual forma, si es la primera vez que clonas el repositorio, o cada miembro del equipo de desarrollo realiza cambios es importante que ejecute el siguiente comando:**
+
+```
+git pull origin main
+```
+
+**Este comando sirve para actualizar los cambios que se esten haciendo del repositorio de github al del repositorio local, o sea el proyecto que clonaste del original no estará actualizado si en este caso alguien lo modifica así conforme si siga desarrollando y construyedo más código, archivos y carpetas**
+
+*Para mayor informacion (yo también estaré estudiando), les recomiendo estudiar este video para conocer el funcionamiento de git y github, ya que el control de trabajo si debe realizarse de forma manual:*
+https://youtu.be/3GymExBkKjE?si=zLJ2PQmF0lUdpPW_
 
 <h1> PASO 2 </h1> Instala las dependencias que necesitará el proyecto, estas estan basadas en los videos: https://youtu.be/Gqr15Uvhr6s?si=7ETVZ1CnEPppSSSF y https://youtu.be/8qteIhQe4ts?si=-L_I0pJiULw6vzlV
 
