@@ -63,7 +63,7 @@ Breve descripción y función de cada depedencia:
 
 Para instalar el uso de postgresql con nodejs:
 ```
- npm install pg
+npm install pg
 ```
 
 **Dependencias de desarollo necesarias:**
@@ -108,3 +108,15 @@ tsc --init
 <p1> Este comando generará un archivo de configuración para activar configuraciones de typescript </p1>
 
 <p1> MPORTANTE PARA EL DESARROLLO: el archivo ".gitignore" literalmente ignora todo los archivos que especifiquemos aquí, como por ejemplo dependencias reinstalables, etc **(NO SUBIR VARIBLES DE ENTORNO, EN ESPECIFICO EL ARCHIVO '.env')** </p1>
+
+<h2>Configuración de primeros Endopoints y ejecución de servidor</h2>
+
+*Toda esta infomación la pueden consultar en el video: https://youtu.be/EpLUFVuJDm8?si=1EJmsZFr3e8sPsAh ciertos aspectos los sigo estudiando, de igual forma les invito a retroalimentar la documentación de este repositorio.*
+
+El archivo "server.ts" es el punto de entrada y de ejecución de todo el servidor, este por si mismo es el que se encuentra separado de las demás conexiones a base de datos, controladores o funcionalidades. Para este momento 19/10/2025 se ha actualizado "package.json" agregando un nuevo comando en 'Script', nos permite que que al realizar una nueva actualización se "refresque" todo el servidor con los cambios sin apagar el servidor y volverlo a levantar, el comando para esto es: 
+
+```
+npm run start:dev
+```
+
+Es importante investigar acerca de la **construcción de rutas para el servidor**, ya que podremos identificar en el archivo "server.ts" (por el momento) la creación de una ruta con el método **GET** que puse de ejemplo para su estudio y visualización.
