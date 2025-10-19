@@ -32,7 +32,7 @@ git pull origin main
 https://youtu.be/3GymExBkKjE?si=zLJ2PQmF0lUdpPW_
 
 
-<h3>Es recomendable que cada quien desarrolle en una rama personalizada que no sea main, la rama <b>main<b> es unicamente la rama donde se juntarán lo cambios que se realice de cada rama que sea hayan verificado como funcionales y sin ningún bug</h3>
+<h3>Es recomendable que cada quien desarrolle en una rama personalizada que no sea main, main es unicamente la "ubicación" donde se juntarán lo cambios que se realice de la rama de cada desarrollador, en el que sea haya verificado funcional y sin ningún bug el código, archivos o alguna funcionalidad que se haya desarrollado</h3>
 
 <h1> PASO 2 </h1> Instala las dependencias que necesitará el proyecto, estas estan basadas en los videos: https://youtu.be/Gqr15Uvhr6s?si=7ETVZ1CnEPppSSSF y https://youtu.be/8qteIhQe4ts?si=-L_I0pJiULw6vzlV
 
