@@ -31,6 +31,9 @@ git pull origin main
 *Para mayor informacion (yo también estaré estudiando), les recomiendo estudiar este video para conocer el funcionamiento de git y github, ya que el control de trabajo si debe realizarse de forma manual:*
 https://youtu.be/3GymExBkKjE?si=zLJ2PQmF0lUdpPW_
 
+
+<h3>Es recomendable que cada quien desarrolle en una rama personalizada que no sea main, la rama <b>main<b> es unicamente la rama donde se juntarán lo cambios que se realice de cada rama que sea hayan verificado como funcionales y sin ningún bug</h3>
+
 <h1> PASO 2 </h1> Instala las dependencias que necesitará el proyecto, estas estan basadas en los videos: https://youtu.be/Gqr15Uvhr6s?si=7ETVZ1CnEPppSSSF y https://youtu.be/8qteIhQe4ts?si=-L_I0pJiULw6vzlV
 
 <h2>Paquetes y dependencias a instalar con el comando:</h2>
