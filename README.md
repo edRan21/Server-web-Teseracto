@@ -120,3 +120,7 @@ npm run start:dev
 ```
 
 Es importante investigar acerca de la **construcción de rutas para el servidor**, ya que podremos identificar en el archivo "server.ts" (por el momento) la creación de una ruta con el método **GET** que puse de ejemplo para su estudio y visualización.
+
+<h5> A partir de este momento, todo lo que se escriba o se elabore será basado por conversaciones con la IA, además de los videos que he dejado en el principio de esta documentación.</h5>
+
+**Esta es la lista de reproducción de la cual también me estoy guiando para la construcción del servidor: https://youtube.com/playlist?list=PLergODdA95keGVKSOPApWRw0XuA-ivH_u&si=UkJ6GArn_s6mdalj**
