@@ -142,6 +142,12 @@ npm install -D @types/pg
 ```
 psql -U postgres
 ```
+
+**Si no funciona intenta con: **
+```
+psql -h localhost -U postgres -d postgres
+```
+
 3. Ingresa la contraseña de la DB
 4. Una vez hecho esto podras ejecutar consultas o comandos SQL desde la terminal, POR EJEMPLO, si tienes acceso a la db Teseracto podras ejecutar:
 ```
@@ -167,7 +173,7 @@ Modelo del sistema Teseracto-Server versión 1.0.0:
 
     1. Modelo MVC (Model-Viewer-Controller)
 
-        1.1 El sistema basado en este Patron de Diseño tiene como propósito a que el usuario tenga al alcance la respuesta del servidor ante su solicitud. El *viewer* (el usuario) solicita un recurso del servidor, el *controller* (organiza unicamente la información **necesaria** para el usuario) del *Model* o la lógica detras del almacenamiento de este(os) recursos.
+        1.1 El sistema basado en este Patron de Diseño tiene como propósito a que el usuario tenga al alcance la respuesta del servidor ante su solicitud. El *viewer* (el usuario ó frontend) solicita un recurso del servidor, el *controller* (organiza unicamente la información **necesaria** para el usuario, maneja los request y los responses) del *Model* o la lógica detras del almacenamiento de este(os) recursos.
 
     2. Responsabilidades separadas de forma modular.
 
@@ -181,3 +187,37 @@ Modelo del sistema Teseracto-Server versión 1.0.0:
     
     5. Programación Orientada a Objetos.
         5.1 Typescript es de un tipado estricto, además de eso se caracteriza por ser una "versión" Java de JavaScript al programar obligatoriamente con el paradigma Orientado a Objetos (el dominio de este paradigma es codeando problemas de esta forma una vez estudiandolo y entendiendolo, pues la practica de abstrear un problema a este tipo desarrolla la lógica con este paradigma)
+
+
+<h5> Como entender TypeORM, construcción de entidades, clases y tipos</h5>
+¿Es más difil entender algo o creandolo?, en realidad la siguientes explicaciones son la punta del iceberg sobre el funcionamiento de las bases de datos.
+
+TypeORM es la dependencia que nos ayuda a modelar la construcción de una Base de datos o mapear su estructura **en código**. para esto es clave entender como se define:
+1. Entidad.
+La entidad es como se denomina o representa una tabla en código, en Typescript para **DEFINIR** a una tabla (y en general a cualquier "propiedad" de una base de datos) utilizamos el signo de **@**.
+
+Ejemplo:
+
+```
+// sintaxys Typescript
+
+ @Entity(´users´)  
+
+// "users" es el nombre que tiene la tabla o recibirá la tabla 
+```
+
+De igual forma sucede lo mismo con las columnas, solamente que estas si no me equivoco tendran como parametros las caracteristicas de la columna como el tipo, la longitud, etc. *(recomeendable estudiar a profundiad)*
+
+ejemplo: 
+
+```
+ @Column({ type: 'varchar', length: 20})
+  role: string;               // ← Columna con restricciones
+```
+Además de otros como:
+
+- **@PrimaryGeneratedColumn()** - Llave primaria
+
+- **@CreateDateColumn()** - Fecha de creación automática
+
+Seguire es su estudio para un mejor entendimiento y documentarlo en el repositorio, se recomienda revisar el código y los comentarios que proximamente dejaré
