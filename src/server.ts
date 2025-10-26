@@ -1,35 +1,64 @@
-import express from 'express';
-import morgan from 'morgan';
-import cors from 'cors';
-import { UserRouter } from './router/user.router.js';
+import 'reflect-metadata';
 
+import express = require('express');
+import morgan = require('morgan');
+import cors = require('cors');
+import { UserRouter } from './router/user.router';
+import { initializeDatabase } from './core/database/connection';
+import { config } from './core/config/environment';
 
 class ServerBootstrap {
     public app: express.Application = express();
-    private port: number = 8000;
+    private port: number = config.PORT;
 
-    //* La función 'constructor' es propia de node.js, esta inicializa todas las funciones y consigo varibles que esten dentro de la clase para que puedan 
-    // compilarse y construir el servidor *//
     constructor() {
-        this.app.use(express.json());
-        this.app.use(express.urlencoded({ extended: true }));
-        this.app.use(morgan("dev"));
-        this.app.use(cors());
-
-        this.app.use("/api", this.routers());
-        this.listen();
+        this.initializeServer();
     }
 
-    routers(): Array<express.Router> {
+    private async initializeServer() {
+        try {
+        // Middlewares
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: true }));
+        this.app.use(morgan('dev'));
+        this.app.use(cors({
+            origin: config.FRONTEND_URL,
+            credentials: true
+        }));
+
+        // Database
+        await initializeDatabase();
+
+        // Routes
+        this.app.use('/api', this.routers());
+        
+        // Health check
+        this.app.get('/health', (req, res) => {
+            res.status(200).json({ 
+            status: 'OK', 
+            timestamp: new Date().toISOString(),
+            database: 'Connected' 
+            });
+        });
+
+        this.listen();
+        } catch (error) {
+        console.error('❌ Error inicializando servidor:', error);
+        process.exit(1);
+        }
+    }
+
+    routers(): express.Router[] {
         return [new UserRouter().router];
     }
 
-    public listen(){
+    public listen() {
         this.app.listen(this.port, () => {
-            console.log("Servidor escuchando en el puerto" + this.port);
+        console.log(` Servidor escuchando en el puerto ${this.port}`);
+        console.log(` Entorno: ${process.env.NODE_ENV}`);
+        console.log(` Health check: http://localhost:${this.port}/health`);
         });
     }
 }
 
-// Inicializar servidor
 new ServerBootstrap();
