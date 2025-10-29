@@ -1,5 +1,7 @@
-import { BaseRouter } from './router';
-import { UserController } from '../controllers/user.controller';
+// web-server/src/router/user.router.ts
+
+import { BaseRouter } from '../../router/router';
+import { UserController } from './user.controller';
 
 export class UserRouter extends BaseRouter<UserController> {
     constructor() {

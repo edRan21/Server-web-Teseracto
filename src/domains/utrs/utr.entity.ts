@@ -1,3 +1,5 @@
+// web-server/src/domains/utrs/utr.entity.ts
+
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
 
 @Entity('utrs')

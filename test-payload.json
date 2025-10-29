@@ -1,0 +1,14 @@
+{
+    "rfc": "TES123456789",
+    "nsm": "M2000-TEST-001", 
+    "nsue": "UTR-001",
+    "timestamp": "2024-03-20T12:01:00Z",
+    "flow_instant": 0.150,
+    "flow_accumulated": 45.250,
+    "flow_velocity": 0.5,
+    "flow_direction": 1,
+    "ker_code": "0",
+    "latitude": 19.432608,
+    "longitude": -99.133209,
+    "unit_measurement": "m³/h"
+}

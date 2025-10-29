@@ -1,9 +1,13 @@
-import 'reflect-metadata';
+// web-server/src/server.ts
 
+// Punto de entrada del servidor y levantamiento total de este.
+
+import 'reflect-metadata';
 import express = require('express');
 import morgan = require('morgan');
 import cors = require('cors');
-import { UserRouter } from './router/user.router';
+import { UserRouter } from './domains/users/user.router';
+import { TelemetryRouter } from './domains/telemetry/telemetry.router';
 import { initializeDatabase } from './core/database/connection';
 import { config } from './core/config/environment';
 
@@ -18,7 +22,7 @@ class ServerBootstrap {
     private async initializeServer() {
         try {
         // Middlewares
-        this.app.use(express.json());
+        this.app.use(express.json({ limit: '10mb' })); // Aumento en el límite para datos
         this.app.use(express.urlencoded({ extended: true }));
         this.app.use(morgan('dev'));
         this.app.use(cors({
@@ -49,14 +53,18 @@ class ServerBootstrap {
     }
 
     routers(): express.Router[] {
-        return [new UserRouter().router];
+        return [
+            new UserRouter().router,
+            new TelemetryRouter().router // Añadir esta nueva ruta para telemetrías
+        ];
     }
 
     public listen() {
         this.app.listen(this.port, () => {
         console.log(` Servidor escuchando en el puerto ${this.port}`);
-        console.log(` Entorno: ${process.env.NODE_ENV}`);
+        console.log(` Entorno: ${process.env.NODE_ENV || 'development'}`);
         console.log(` Health check: http://localhost:${this.port}/health`);
+        console.log(` Endponint Telemetría: https//localhost:${this.port}/api/telemetry`);
         });
     }
 }

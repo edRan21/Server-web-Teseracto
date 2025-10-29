@@ -1,3 +1,5 @@
+// server-web/src/domains/clients/client.entity.ts
+
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
 
 @Entity('clients')

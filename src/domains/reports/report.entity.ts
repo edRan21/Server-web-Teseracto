@@ -1,4 +1,5 @@
-// src/domains/reports/report.entity.ts
+// web-server/src/domains/reports/report.entity.ts
+
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
 
 @Entity('reports')

@@ -143,10 +143,15 @@ npm install -D @types/pg
 psql -U postgres
 ```
 
-**Si no funciona intenta con: **
+**Si no funciona intenta con:**
 ```
 psql -h localhost -U postgres -d postgres
 ```
+
+**SI DE PLANO NO FUNCIONO, toma nota:**
+* Tal vez se deba que lo servicios de PostgreSQL en el equipo esten inhabilitadas, esto ya que este tipo de softwares corren sus funciones en segundo plano a traves de la ejecución en nuestro equipo (si no me equivoco).
+    - Por lo que deberás presionar *Windows + R* y poner en panel de busqueda *services.msc*, el cual abrirá un panel de gestión de los servicios del sistema operativo.
+    - Deberás buscar alguno que indique "Posgres", darle clic al servicio y darle clic al botón *"iniciar"*, esto activiará los servicios de conexión a la base de datos.
 
 3. Ingresa la contraseña de la DB
 4. Una vez hecho esto podras ejecutar consultas o comandos SQL desde la terminal, POR EJEMPLO, si tienes acceso a la db Teseracto podras ejecutar:
@@ -190,7 +195,7 @@ Modelo del sistema Teseracto-Server versión 1.0.0:
 
 
 <h5> Como entender TypeORM, construcción de entidades, clases y tipos</h5>
-¿Es más difil entender algo o creandolo?, en realidad la siguientes explicaciones son la punta del iceberg sobre el funcionamiento de las bases de datos.
+¿Es más difil entender algo o creandolo?, en realidad la siguientes explicaciones son la punta del iceberg sobre el funcionamiento de las bases de datos en código.
 
 TypeORM es la dependencia que nos ayuda a modelar la construcción de una Base de datos o mapear su estructura **en código**. para esto es clave entender como se define:
 1. Entidad.
@@ -220,4 +225,10 @@ Además de otros como:
 
 - **@CreateDateColumn()** - Fecha de creación automática
 
-Seguire es su estudio para un mejor entendimiento y documentarlo en el repositorio, se recomienda revisar el código y los comentarios que proximamente dejaré
+Seguire es su estudio para un mejor entendimiento y documentarlo en el repositorio, se recomienda revisar el código y los comentarios que proximamente dejaré.
+
+<h4> Palabras reservadas de SQL para escribir comandos para el uso de herramientas de la base de datos de PostgreSQL </h4>
+
+1. Comandos de Query.
+    * **SELECT** : esta palabra sirve para tomar o seleccionar (como su nombre lo dice 'SELECT') una una entidad o propiedad creada de la base de datos para consultar; comúnmente se utiliza para **filtrar** que elementos de la DB ver, por ejemplo, *seleccionar* los "elementos" escribiendo el nombre de una columna, de las columnas o de esos elementos que quieres consultar.
+    * **FROM** : esta palabra sirve como un complemeneto del *SELECT* pues este le indica a este de **DONDE** tomará los datos a consultar, por lo general se escribe el nombre de la tabla en donde se encontrarán los elementos *seleccionados*. 

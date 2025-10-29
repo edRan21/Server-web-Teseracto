@@ -1,3 +1,5 @@
+// web-server/src/domains/telemetry/telemetry-data.entity.ts
+
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn } from 'typeorm';
 
 @Entity('telemetry_data')
