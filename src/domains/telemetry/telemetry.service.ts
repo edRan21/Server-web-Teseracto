@@ -9,7 +9,7 @@ export class TelemetryService {
     private utrRepo = AppDataSource.getRepository(UTR);
 
 
-    async procesTelemetryData(payload: any) {
+    async processTelemetryData(payload: any) {
         // 1. Buscar la UTR por NSUE
         const utr = await this.utrRepo.findOne({
 
