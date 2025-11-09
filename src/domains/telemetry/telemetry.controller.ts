@@ -19,7 +19,7 @@ export class TelemetryController {
             }
 
             // Procesar datos
-            const result = await this.telemetryService.procesTelemetryData(payload);
+            const result = await this.telemetryService.processTelemetryData(payload);
 
             res.status(201).json({
                 success: true,
