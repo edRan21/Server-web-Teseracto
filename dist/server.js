@@ -10,6 +10,8 @@ const user_router_1 = require("./domains/users/user.router");
 const telemetry_router_1 = require("./domains/telemetry/telemetry.router");
 const connection_1 = require("./core/database/connection");
 const environment_1 = require("./core/config/environment");
+const report_router_1 = require("./domains/reports/report.router");
+const auth_1 = require("./domains/auth");
 class ServerBootstrap {
     constructor() {
         this.app = express();
@@ -45,10 +47,13 @@ class ServerBootstrap {
             process.exit(1);
         }
     }
+    // Método de routes
     routers() {
         return [
+            new auth_1.AuthRouter().router,
             new user_router_1.UserRouter().router,
-            new telemetry_router_1.TelemetryRouter().router // Añadir esta nueva ruta para telemetrías
+            new telemetry_router_1.TelemetryRouter().router, // Añadir esta nueva ruta para telemetrías
+            new report_router_1.ReportRouter().router
         ];
     }
     listen() {
