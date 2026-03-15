@@ -2,29 +2,30 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    // "rootDir": "./src",
+    "rootDir": "./src",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "outDir": "./dist",
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "esnext",
-    "target": "es2020",
+    "module": "commonjs",
+    "target": "ES2020",
     "types": [],
     // For nodejs:
-    // "lib": ["esnext"],
+    // "lib": ["ES2020"],
     // "types": ["node"],
     // and npm install -D @types/node
 
     // Other Outputs
     "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    "declaration": false,
+    "declarationMap": false,
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+    "exactOptionalPropertyTypes": false,
+    "forceConsistentCasingInFileNames": true,
 
     // Style Options
     // "noImplicitReturns": true,
@@ -42,12 +43,15 @@
     // Recommended Options
     /* Type Checking*/
     "strict": true,
-    "strictPropertyInitialization": true,
+    "strictPropertyInitialization": false,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    
   }
 }
