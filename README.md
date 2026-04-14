@@ -40,7 +40,7 @@ https://youtu.be/3GymExBkKjE?si=zLJ2PQmF0lUdpPW_
 <h2>Paquetes y dependencias a instalar con el comando:</h2>
 
 ```
-npm install class-validator cors dotenv express morgan typeorm typeorm-naming-strategies typescript.
+npm install class-validator cors dotenv express morgan typeorm typeorm-naming-strategies typescript
 ```
 
 Breve descripción y función de cada depedencia:
@@ -114,7 +114,7 @@ tsc --init
 
 *Toda esta infomación la pueden consultar en el video: https://youtu.be/EpLUFVuJDm8?si=1EJmsZFr3e8sPsAh ciertos aspectos los sigo estudiando, de igual forma les invito a retroalimentar la documentación de este repositorio.*
 
-El archivo "server.ts" es el punto de entrada y de ejecución de todo el servidor, este por si mismo es el que se encuentra separado de las demás conexiones a base de datos, controladores o funcionalidades. Para este momento 19/10/2025 se ha actualizado "package.json" agregando un nuevo comando en 'Script', nos permite que que al realizar una nueva actualización se "refresque" todo el servidor con los cambios sin apagar el servidor y volverlo a levantar, el comando para esto es: 
+El archivo "server.ts" es el punto de entrada y de ejecución de todo el servidor, este por si mismo es el que se encuentra separado de las demás conexiones a base de datos, controladores o funcionalidades. Para este momento 19/10/2025 se ha actualizado "package.json" agregando un nuevo comando en 'Script', nos permite que al realizar una nueva actualización se "refresque" todo el servidor con los cambios sin apagar el servidor y volverlo a levantar, el comando para esto es: 
 
 ```
 npm run start:dev

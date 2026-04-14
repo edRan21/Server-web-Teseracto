@@ -13,7 +13,7 @@ export class TelemetryService {
         // 1. Buscar la UTR por NSUE
         const utr = await this.utrRepo.findOne({
 
-            where: { nsue: payload.nsue }
+            where: { nsut: payload.nsut }
         });
 
         if (!utr) { 

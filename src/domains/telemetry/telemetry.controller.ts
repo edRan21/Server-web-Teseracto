@@ -11,10 +11,10 @@ export class TelemetryController {
             const payload = req.body;
 
             // Validaciones básicas
-            if (!payload.nsue || !payload.rfc) {
+            if (!payload.nsut || !payload.rfc) {
                 return res.status(400).json({
                     error: 'Petición incorrecta',
-                    message: 'Los campos nsue y rfc son obligatorios'
+                    message: 'Los campos nsut y rfc son obligatorios'
                 });
             }
 

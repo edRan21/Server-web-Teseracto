@@ -13,6 +13,9 @@ export class UTR {
     @Column({ type: 'varchar', length: 100, nullable: true })
     nsm: string;
 
+    @Column({ type: 'varchar', length: 100, nullable: true})
+    nsut: string;
+
     @Column()
     client_id: number;
 
