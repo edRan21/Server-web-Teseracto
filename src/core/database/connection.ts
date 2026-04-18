@@ -10,10 +10,10 @@ import { UTR } from '../../domains/utrs/utr.entity';
 import { TelemetryData } from '../../domains/telemetry/telemetry-data.entity';
 import { Report } from '../../domains/reports/report.entity';
 
-// Importamos las entidades representadas en código de sus directorios correspondientes de la base de datos que se creo.
+// Exportamos las entidades representadas en código de sus directorios correspondientes de la base de datos que se creo.
 
-// Suponiendo la sintaxis de Typescript el método 'export const' obtiene los datos por la función 'AppDataSource' como un nuevo objeto con
-// parametros para contectarse a la DB
+// Suponiendo la sintaxis de Typescript la instancia|objeto 'AppDataSource' se crea como un nuevo objeto con ese caracteristico 'export const' 
+// construye los datos de una clase 'DataSource' para contectarse a la DB
 // se llama 'export', porque sera una constante que se podra obtener en otro lado del proyecto.
 
 export const AppDataSource = new DataSource({
@@ -29,7 +29,7 @@ export const AppDataSource = new DataSource({
     logging: process.env.NODE_ENV !== 'production',
     });
 
-// Realiza la conexión con la función o la inicializa, 'AppDataSource' contiene los parametros necesarios para realizar el intento de forma asincronica a la base de dato. 
+// Realiza la conexión inicializadp una instancia de 'AppDataSource' contiene los datos necesarios para realizar el intento de forma asincronica a la base de dato. 
     export const initializeDatabase = async (): Promise<void> => {
     try {
         await AppDataSource.initialize();
