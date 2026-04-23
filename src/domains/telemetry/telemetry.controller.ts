@@ -41,4 +41,18 @@ export class TelemetryController {
             });
         }
     }
+    // Agrégalo dentro de la clase en src/domains/telemetry/telemetry.controller.ts
+    public async getTelemetryByUtrId(req: Request, res: Response) {
+        try {
+            // Le confirmamos a TypeScript que 'id' viene como texto en la URL
+            const id = parseInt(req.params.id as string); 
+            
+            // Usamos el nombre correcto de tu variable: telemetryService
+            const data = await this.telemetryService.getLatestDataByUtr(id);
+            
+            res.status(200).json({ success: true, data: data });
+        } catch (error) {
+            res.status(500).json({ success: false, error: 'Error al obtener datos de la telemetría' });
+        }
+    }
 }

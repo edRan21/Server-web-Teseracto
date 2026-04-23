@@ -47,4 +47,27 @@ export class TelemetryService {
             timestamp: savedData.timestamp
         };
     }
+
+    public async getLatestDataByUtr(utrId: number) {
+        // 1. Verificamos que la máquina exista
+        const utr = await this.utrRepo.findOne({ where: { id: utrId } });
+        
+        if (!utr) {
+            throw new Error('La telemetría solicitada no existe.');
+        }
+
+        // 2. Usamos el nombre correcto: telemetryRepo
+        const latestData = await this.telemetryRepo.findOne({
+            where: { utr_id: utrId },
+            order: { timestamp: 'DESC' } // Ordenamos de más nuevo a más viejo
+        });
+
+        // 3. Juntamos el nombre de la máquina con sus lecturas y lo enviamos
+        return {
+            nsut: utr.nsut,
+            flow_instant: latestData?.flow_instant || 0,
+            ker_code: latestData?.ker_code || 'Sin datos',
+            timestamp: latestData?.timestamp
+        };
+    }
 }
